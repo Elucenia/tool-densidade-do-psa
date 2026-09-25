@@ -1,0 +1,19 @@
+{
+  "name": "@elucenia/tool-densidade-do-psa",
+  "version": "0.1.0",
+  "description": "Densidade do PSA",
+  "main": "calculator.js",
+  "type": "commonjs",
+  "license": "MIT",
+  "scripts": {
+    "test": "node test.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Elucenia/tool-densidade-do-psa.git"
+  }
+}

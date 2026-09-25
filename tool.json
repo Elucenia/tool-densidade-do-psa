@@ -1,0 +1,156 @@
+{
+  "tool": {
+    "id": "densidade-do-psa",
+    "title": "Densidade do PSA",
+    "short": "PSA ajustado ao volume da próstata",
+    "desc": "Calcule a densidade do PSA (PSA dividido pelo volume prostático) para estimar o risco de câncer de próstata e apoiar a decisão de biópsia.",
+    "lead": "Divide o PSA sérico pelo volume da próstata medido por ultrassom transretal ou ressonância. Ajuda a separar a elevação do PSA pela hiperplasia benigna da elevação pelo câncer.",
+    "spec": [
+      "urologia",
+      "radiologia-e-diagnostico-por-imagem",
+      "oncologia-clinica"
+    ],
+    "tier": 1,
+    "fields": [
+      [
+        "psa",
+        "PSA total",
+        "num",
+        {
+          "min": 0.1,
+          "max": 1000,
+          "step": 0.01,
+          "unit": "ng/mL",
+          "ph": "6,0"
+        }
+      ],
+      [
+        "vol",
+        "Volume prostático (USG transretal ou RM)",
+        "num",
+        {
+          "min": 5,
+          "max": 400,
+          "step": 0.1,
+          "unit": "mL (cm³)",
+          "ph": "40"
+        }
+      ]
+    ],
+    "formula": "<p>Densidade do PSA (ng/mL/cm³) = PSA total ÷ volume prostático.</p><p>Se tiver apenas as três medidas da próstata, calcule antes o volume prostático.</p>",
+    "table": [
+      [
+        "Densidade",
+        "Interpretação"
+      ],
+      [
+        "&lt; 0,10",
+        "Menor probabilidade de câncer clinicamente significativo"
+      ],
+      [
+        "0,10 a 0,14",
+        "Zona intermediária"
+      ],
+      [
+        "≥ 0,15",
+        "Limiar clássico: favorece biópsia"
+      ]
+    ],
+    "table_note": "No estudo STHLM3 (Nordström 2018), densidades de 0,10 e 0,15 detectaram 77% e 49% dos tumores Gleason ≥ 7; não biopsiar com densidade ≤ 0,07 pouparia 19,7% das biópsias com perda de 6,9% dos tumores significativos.",
+    "tips": [
+      "A densidade é mais útil com PSA na faixa \"cinzenta\" (4 a 10 ng/mL) e após ressonância com lesão PI-RADS 3 ou sem lesão.",
+      "Com ressonância negativa, densidade baixa reforça a opção de não biopsiar; densidade alta mantém a indicação mesmo sem lesão visível.",
+      "Finasterida e dutasterida reduzem o PSA em cerca de 50% após 6 a 12 meses: dobre o valor antes de interpretar.",
+      "Prostatite, retenção urinária, sondagem e manipulação recente elevam o PSA transitoriamente.",
+      "O volume medido pela ressonância costuma ser mais reprodutível que o do ultrassom abdominal."
+    ],
+    "sources": [
+      [
+        "Benson MC et al. The use of prostate specific antigen density to enhance the predictive value of intermediate levels of serum prostate specific antigen. J Urol, 1992.",
+        "https://doi.org/10.1016/S0022-5347(17)37394-9"
+      ],
+      [
+        "Nordström T et al. Prostate-specific antigen (PSA) density in the diagnostic algorithm of prostate cancer. Prostate Cancer Prostatic Dis, 2018.",
+        "https://doi.org/10.1038/s41391-017-0024-7"
+      ]
+    ],
+    "cases": [
+      [
+        "PSA 4,0 e volume 50 mL: 0,08",
+        {
+          "psa": 4,
+          "vol": 50
+        },
+        {
+          "raw": {
+            "psad": 0.08
+          },
+          "main": "0,08",
+          "level": "low",
+          "tol": 0.0001
+        }
+      ],
+      [
+        "PSA 5,0 e volume 40 mL: 0,125",
+        {
+          "psa": 5,
+          "vol": 40
+        },
+        {
+          "raw": {
+            "psad": 0.125
+          },
+          "level": "mid",
+          "tol": 0.0001
+        }
+      ],
+      [
+        "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+        {
+          "psa": 6,
+          "vol": 40
+        },
+        {
+          "raw": {
+            "psad": 0.15
+          },
+          "main": "0,15",
+          "level": "high",
+          "tol": 0.0001
+        }
+      ]
+    ],
+    "batch": "renal-digestivo",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "renal-digestivo",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/renal-digestivo.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/renal-digestivo.php",
+    "sha256": "95087d729438637d36e1a49af04d8de0fe1d9f7876443084443906a9281ef107",
+    "bytes": 109421
+  },
+  "clinicalValidation": "not-performed"
+}

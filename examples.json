@@ -1,0 +1,61 @@
+[
+  {
+    "label": "PSA 4,0 e volume 50 mL: 0,08",
+    "input": {
+      "psa": 4,
+      "vol": 50
+    },
+    "expected": {
+      "raw": {
+        "psad": 0.08
+      },
+      "main": "0,08",
+      "level": "low",
+      "tol": 0.0001
+    },
+    "originalInput": {
+      "psa": 4,
+      "vol": 50
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "PSA 5,0 e volume 40 mL: 0,125",
+    "input": {
+      "psa": 5,
+      "vol": 40
+    },
+    "expected": {
+      "raw": {
+        "psad": 0.125
+      },
+      "level": "mid",
+      "tol": 0.0001
+    },
+    "originalInput": {
+      "psa": 5,
+      "vol": 40
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+    "input": {
+      "psa": 6,
+      "vol": 40
+    },
+    "expected": {
+      "raw": {
+        "psad": 0.15
+      },
+      "main": "0,15",
+      "level": "high",
+      "tol": 0.0001
+    },
+    "originalInput": {
+      "psa": 6,
+      "vol": 40
+    },
+    "expandedZeroOptions": []
+  }
+]
