@@ -1,9 +1,11 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-densidade-do-psa · Elucenia · https://github.com/Elucenia/tool-densidade-do-psa
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"densidade-do-psa","title":"Densidade do PSA","fields":[["psa","PSA total","num",{"min":0.1,"max":1000,"step":0.01,"unit":"ng/mL","ph":"6,0"}],["vol","Volume prostático (USG transretal ou RM)","num",{"min":5,"max":400,"step":0.1,"unit":"mL (cm³)","ph":"40"}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
