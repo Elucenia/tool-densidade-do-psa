@@ -1,0 +1,636 @@
+{
+  "schema": "elucenia-native-tool-actual-r6-local-HTTP-subset-r5",
+  "id": "densidade-do-psa",
+  "sourceReceipt": {
+    "file": "reports/review-20261005-completion/deploy-lock/r6-all-calculators-http-results.json",
+    "bytes": 7105396,
+    "sha256": "c0b1e4dc320ce807e78c0444e629c1269b545b6e2ac87c265d896073d8c34ecb"
+  },
+  "servedBuildId": "jN-2wbRrarMjYPwdPnRHh",
+  "checker": {
+    "file": "reports/review-20261005-completion/deploy-lock/verify-r6-all-calculators-http.cjs",
+    "sha256": "92411a9e01fe36e1bf380c3336f2171bdb523a02ff09683da75927b12b33b3fa",
+    "bytes": 20735
+  },
+  "health": {
+    "url": "http://127.0.0.1:3067/api/health",
+    "startedAt": "2026-10-05T17:35:43.039Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json",
+      "retryAfter": null,
+      "cacheControl": "no-store",
+      "nosniff": "nosniff"
+    },
+    "body": {
+      "status": "ok",
+      "application": "ELUCENIA",
+      "framework": "Next.js",
+      "version": "1.0.0"
+    },
+    "responseSha256": "65f95645e7826371eb2d9d3f96e0fed52ea4b88c77203f0cf2511769e57cd108",
+    "bytes": 80,
+    "elapsedMs": 27.345699999999994
+  },
+  "identity": {
+    "url": "http://127.0.0.1:3067/_next/data/jN-2wbRrarMjYPwdPnRHh/en/tools.json",
+    "startedAt": "2026-10-05T17:35:43.068Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "cacheControl": "s-maxage=31536000",
+      "nosniff": "nosniff"
+    },
+    "responseSha256": "404601e2c283a588a2f41af4feb5113d1993f76cc22f73a7b8ef4f5d17a82fa8",
+    "bytes": 103853,
+    "elapsedMs": 14.542600000000007,
+    "semanticMatchWithCompiledCatalog": true
+  },
+  "sourceCalculator": {
+    "file": "deliveries/elucenia-next-hostinger-r6/private/tool-code/densidade-do-psa/calculator.js",
+    "sha256": "7812527b8fa3d05be125d05696b19763c1cdf28c61c19b6268e26636773b5698",
+    "bytes": 4779
+  },
+  "sourceCalculatorMatchesCurrentCandidate": true,
+  "toolStatus": {
+    "cases": 3,
+    "replayed": 3,
+    "passed": 3,
+    "failed": 0,
+    "status": "passed"
+  },
+  "cases": [
+    {
+      "id": "densidade-do-psa",
+      "kind": "native-source-reference",
+      "index": 0,
+      "name": "PSA 4,0 e volume 50 mL: 0,08",
+      "originalInput": {
+        "psa": 4,
+        "vol": 50
+      },
+      "input": {
+        "psa": 4,
+        "vol": 50
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "psad": 0.08
+        },
+        "main": "0,08",
+        "level": "low",
+        "tol": 0.0001
+      },
+      "recordedResult": {
+        "main": [
+          "0,08",
+          "ng/mL/cm³"
+        ],
+        "label": "Densidade do PSA",
+        "raw": {
+          "psad": 0.08
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/densidade-do-psa/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "psa": 4,
+            "vol": 50
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/densidade-do-psa/calculate",
+          "startedAt": "2026-10-05T17:36:41.473Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "densidade-do-psa",
+              "main": [
+                "0,08",
+                "ng/mL/cm³"
+              ],
+              "label": "Densidade do PSA",
+              "raw": {
+                "psad": 0.08
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "7c29713e61ee73db734f1947425de36a12bbca844148046edaaa63705e1b6982",
+          "bytes": 149,
+          "elapsedMs": 4.370000000002619
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/densidade-do-psa/calculate",
+        "startedAt": "2026-10-05T17:36:41.473Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "densidade-do-psa",
+            "main": [
+              "0,08",
+              "ng/mL/cm³"
+            ],
+            "label": "Densidade do PSA",
+            "raw": {
+              "psad": 0.08
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "7c29713e61ee73db734f1947425de36a12bbca844148046edaaa63705e1b6982",
+        "bytes": 149,
+        "elapsedMs": 4.370000000002619
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "0,08",
+            "obtained": "0,08",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.psad",
+            "expected": 0.08,
+            "obtained": 0.08,
+            "tolerance": 0.0001,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.psad",
+            "expected": 0.08,
+            "obtained": 0.08,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "0,08",
+            "obtained": "0,08",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "ng/mL/cm³",
+            "obtained": "ng/mL/cm³",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "densidade-do-psa",
+      "kind": "native-source-reference",
+      "index": 1,
+      "name": "PSA 5,0 e volume 40 mL: 0,125",
+      "originalInput": {
+        "psa": 5,
+        "vol": 40
+      },
+      "input": {
+        "psa": 5,
+        "vol": 40
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "psad": 0.125
+        },
+        "level": "mid",
+        "tol": 0.0001
+      },
+      "recordedResult": {
+        "main": [
+          "0,13",
+          "ng/mL/cm³"
+        ],
+        "label": "Densidade do PSA",
+        "raw": {
+          "psad": 0.125
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/densidade-do-psa/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "psa": 5,
+            "vol": 40
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/densidade-do-psa/calculate",
+          "startedAt": "2026-10-05T17:36:41.773Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "densidade-do-psa",
+              "main": [
+                "0,13",
+                "ng/mL/cm³"
+              ],
+              "label": "Densidade do PSA",
+              "raw": {
+                "psad": 0.125
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "84eed7a72645cd0700ec9dddfc2510a2267271f27dd7188dfa1671407a1a70ab",
+          "bytes": 150,
+          "elapsedMs": 3.9302000000025146
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/densidade-do-psa/calculate",
+        "startedAt": "2026-10-05T17:36:41.773Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "densidade-do-psa",
+            "main": [
+              "0,13",
+              "ng/mL/cm³"
+            ],
+            "label": "Densidade do PSA",
+            "raw": {
+              "psad": 0.125
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "84eed7a72645cd0700ec9dddfc2510a2267271f27dd7188dfa1671407a1a70ab",
+        "bytes": 150,
+        "elapsedMs": 3.9302000000025146
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.psad",
+            "expected": 0.125,
+            "obtained": 0.125,
+            "tolerance": 0.0001,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.psad",
+            "expected": 0.125,
+            "obtained": 0.125,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "0,13",
+            "obtained": "0,13",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "ng/mL/cm³",
+            "obtained": "ng/mL/cm³",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "densidade-do-psa",
+      "kind": "native-source-reference",
+      "index": 2,
+      "name": "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+      "originalInput": {
+        "psa": 6,
+        "vol": 40
+      },
+      "input": {
+        "psa": 6,
+        "vol": 40
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "psad": 0.15
+        },
+        "main": "0,15",
+        "level": "high",
+        "tol": 0.0001
+      },
+      "recordedResult": {
+        "main": [
+          "0,15",
+          "ng/mL/cm³"
+        ],
+        "label": "Densidade do PSA",
+        "raw": {
+          "psad": 0.15
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/densidade-do-psa/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "psa": 6,
+            "vol": 40
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/densidade-do-psa/calculate",
+          "startedAt": "2026-10-05T17:36:42.088Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "densidade-do-psa",
+              "main": [
+                "0,15",
+                "ng/mL/cm³"
+              ],
+              "label": "Densidade do PSA",
+              "raw": {
+                "psad": 0.15
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "6c7c7664f2fc6de4eac2edc6a389ebd93acb94d54faecdffa41ee1bcfe3402b0",
+          "bytes": 149,
+          "elapsedMs": 2.573499999998603
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/densidade-do-psa/calculate",
+        "startedAt": "2026-10-05T17:36:42.088Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "densidade-do-psa",
+            "main": [
+              "0,15",
+              "ng/mL/cm³"
+            ],
+            "label": "Densidade do PSA",
+            "raw": {
+              "psad": 0.15
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "6c7c7664f2fc6de4eac2edc6a389ebd93acb94d54faecdffa41ee1bcfe3402b0",
+        "bytes": 149,
+        "elapsedMs": 2.573499999998603
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "0,15",
+            "obtained": "0,15",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.psad",
+            "expected": 0.15,
+            "obtained": 0.15,
+            "tolerance": 0.0001,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.psad",
+            "expected": 0.15,
+            "obtained": 0.15,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "0,15",
+            "obtained": "0,15",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "ng/mL/cm³",
+            "obtained": "ng/mL/cm³",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    }
+  ],
+  "scope": {
+    "syntheticDataOnly": true,
+    "applicationModuleImports": 0,
+    "browserInteractions": 0,
+    "newIndependentOracles": 0,
+    "nativeSourceReferenceCases": 882,
+    "additionalDecimalCases": 4,
+    "predictProstateHasSeparateFullCurveOracleReplay": true,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "populationValidation": false,
+    "hostingerDeploymentVerified": false,
+    "actualHTTPExecution": true,
+    "standaloneNodeServer": true,
+    "nodeVersion": "v22.18.0",
+    "noNewClinicalOrProfessionalApproval": true,
+    "pubmedResourceIsNotCalculatorAndNotIncludedIn222": true,
+    "description": "All 882 existing reference cases across the 218 native calculators plus four existing Decimal50 examples, executed via HTTP against the final local r6 standalone build. Raw precise source-audit comparisons are transport regressions, not independent clinical or full-method validation."
+  },
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false,
+  "newIndependentOracle": false,
+  "actualBrowserJourney": false,
+  "hostingerDeploymentVerified": false
+}
