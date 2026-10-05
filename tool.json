@@ -5,12 +5,12 @@
     "short": "PSA ajustado ao volume da próstata",
     "desc": "Calcule a densidade do PSA (PSA dividido pelo volume prostático) para estimar o risco de câncer de próstata e apoiar a decisão de biópsia.",
     "lead": "Divide o PSA sérico pelo volume da próstata medido por ultrassom transretal ou ressonância. Ajuda a separar a elevação do PSA pela hiperplasia benigna da elevação pelo câncer.",
+    "kind": "Calculadora",
     "spec": [
       "urologia",
       "radiologia-e-diagnostico-por-imagem",
       "oncologia-clinica"
     ],
-    "tier": 1,
     "fields": [
       [
         "psa",
@@ -38,32 +38,6 @@
       ]
     ],
     "formula": "<p>Densidade do PSA (ng/mL/cm³) = PSA total ÷ volume prostático.</p><p>Se tiver apenas as três medidas da próstata, calcule antes o volume prostático.</p>",
-    "table": [
-      [
-        "Densidade",
-        "Interpretação"
-      ],
-      [
-        "&lt; 0,10",
-        "Menor probabilidade de câncer clinicamente significativo"
-      ],
-      [
-        "0,10 a 0,14",
-        "Zona intermediária"
-      ],
-      [
-        "≥ 0,15",
-        "Limiar clássico: favorece biópsia"
-      ]
-    ],
-    "table_note": "No estudo STHLM3 (Nordström 2018), densidades de 0,10 e 0,15 detectaram 77% e 49% dos tumores Gleason ≥ 7; não biopsiar com densidade ≤ 0,07 pouparia 19,7% das biópsias com perda de 6,9% dos tumores significativos.",
-    "tips": [
-      "A densidade é mais útil com PSA na faixa \"cinzenta\" (4 a 10 ng/mL) e após ressonância com lesão PI-RADS 3 ou sem lesão.",
-      "Com ressonância negativa, densidade baixa reforça a opção de não biopsiar; densidade alta mantém a indicação mesmo sem lesão visível.",
-      "Finasterida e dutasterida reduzem o PSA em cerca de 50% após 6 a 12 meses: dobre o valor antes de interpretar.",
-      "Prostatite, retenção urinária, sondagem e manipulação recente elevam o PSA transitoriamente.",
-      "O volume medido pela ressonância costuma ser mais reprodutível que o do ultrassom abdominal."
-    ],
     "sources": [
       [
         "Benson MC et al. The use of prostate specific antigen density to enhance the predictive value of intermediate levels of serum prostate specific antigen. J Urol, 1992.",
@@ -120,9 +94,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -131,17 +102,142 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-03T17:15:29.797Z",
+      "total": 2,
+      "passed": 2,
+      "evidencePath": "reports/review-20261003/native-additional-independent-oracles.json",
+      "scope": "Additional independent arithmetic checks for14 previously unchecked native tools. Formula indication and clinical outcomes are outside these numerical checks.",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "PSAdensidade/Benson 1992:PSA/volume, ng/m L/cm³; sem assumir ponto decorte universal",
+    "implementationVersion": "densidade-do-psa@native-2026-10-03+7812527b8fa3",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/1371555/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Densidade do PSA (ng/mL/cm³) = PSA total ÷ volume prostático. Se tiver apenas as três medidas da próstata, calcule antes o volume prostático.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "psa",
+            "label": "PSA total",
+            "type": "num",
+            "min": 0.1,
+            "max": 1000,
+            "unit": "ng/mL",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "vol",
+            "label": "Volume prostático (USG transretal ou RM)",
+            "type": "num",
+            "min": 5,
+            "max": 400,
+            "unit": "mL (cm³)",
+            "optional": false,
+            "options": null
+          }
+        ],
+        "hash": "84f07411ea0e265b039bcabc1a7ad7ec8f2aa0ba7ace8225eaa5017573513669"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Benson MC et al. The use of prostate specific antigen density to enhance the predictive value of intermediate levels of serum prostate specific antigen. J Urol, 1992.",
+          "url": "https://doi.org/10.1016/S0022-5347(17)37394-9",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "The use of prostate specific antigen density to enhance the predictive value of intermediate levels of serum prostate specific antigen.",
+            "year": "1992",
+            "firstPublicationDate": "1992-03-01",
+            "doi": "10.1016/s0022-5347(17)37394-9",
+            "pmid": "1371555",
+            "journal": "The Journal of urology",
+            "authors": "Benson MC, Whang IS, Olsson CA, McMahon DJ, Cooner WH."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/1371555/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "783fd97a1e5c33238501fc4d152e39a431af2f4175c20252f68e776852505b8b",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Nordström T et al. Prostate-specific antigen (PSA) density in the diagnostic algorithm of prostate cancer. Prostate Cancer Prostatic Dis, 2018.",
+          "url": "https://doi.org/10.1038/s41391-017-0024-7",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Prostate-specific antigen (PSA) density in the diagnostic algorithm of prostate cancer.",
+            "year": "2018",
+            "firstPublicationDate": "2017-12-19",
+            "doi": "10.1038/s41391-017-0024-7",
+            "pmid": "29259293",
+            "journal": "Prostate cancer and prostatic diseases",
+            "authors": "Nordström T, Akre O, Aly M, Grönberg H, Eklund M."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/29259293/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "d7447573aef7ab6eea7d1659644bbc506dcdfc602305a6940c5ee37a7e824f95",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-03T17:15:29.797Z",
+        "total": 2,
+        "passed": 2,
+        "evidencePath": "reports/review-20261003/native-additional-independent-oracles.json",
+        "scope": "Additional independent arithmetic checks for14 previously unchecked native tools. Formula indication and clinical outcomes are outside these numerical checks.",
+        "caseEvidence": {
+          "schema": "independentArithmeticTest.cases",
+          "recordedEvidenceSha256": "7b28245564400df507470f5a22e106829382000f471e8b3c4abf3763501d57a9",
+          "meaning": "Reference to the already recorded per-tool evidence; no new test or approval is created by this synchronization."
+        }
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "7812527b8fa3d05be125d05696b19763c1cdf28c61c19b6268e26636773b5698"
+    },
+    "limits": "Benson 1992 estudou densidade de PSA em homens, com volume prostático por ultrassom transretal e PSA intermediário de 4,1–10 ng/mL pelo ensaio Hybritech. O artigo descreve nomogramas de risco; o valor PSA/volume isolado não constitui diagnóstico nem estabelece um corte universal. Método de volume, ensaio de PSA e população de aplicação devem ser considerados.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.803Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Resumo não confirma corte 0,15 universal, intercâmbio RM/ultrassom, outras plataformas PSA ou toda faixa etária."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/densidade-do-psa/calculator.js",
+    "bytes": 4779,
+    "sha256": "7812527b8fa3d05be125d05696b19763c1cdf28c61c19b6268e26636773b5698"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "10314ffa2c812b6a9e87e9f6f3e538d0996966cfc7d3155b5617bd416a2754cc",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 2,
+      "sha256": "7a01fd704bb25f5d56842577ca87e804f2d1c03632aff07082bbb58282378081",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

@@ -1,0 +1,276 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field psa",
+    "input": {
+      "vol": 50
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "psa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field psa",
+    "input": {
+      "psa": "",
+      "vol": 50
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "psa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" psa",
+    "input": {
+      "psa": "NaN",
+      "vol": 50
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "psa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" psa",
+    "input": {
+      "psa": "Infinity",
+      "vol": 50
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "psa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" psa",
+    "input": {
+      "psa": "1e309",
+      "vol": 50
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "psa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" psa",
+    "input": {
+      "psa": "invalid",
+      "vol": 50
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "psa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} psa",
+    "input": {
+      "psa": {},
+      "vol": 50
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "psa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true psa",
+    "input": {
+      "psa": true,
+      "vol": 50
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "psa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum psa",
+    "input": {
+      "psa": -0.9,
+      "vol": 50
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "psa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum psa",
+    "input": {
+      "psa": 1100,
+      "vol": 50
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "psa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field vol",
+    "input": {
+      "psa": 4
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "vol"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field vol",
+    "input": {
+      "psa": 4,
+      "vol": ""
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "vol"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" vol",
+    "input": {
+      "psa": 4,
+      "vol": "NaN"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vol"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" vol",
+    "input": {
+      "psa": 4,
+      "vol": "Infinity"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vol"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" vol",
+    "input": {
+      "psa": 4,
+      "vol": "1e309"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vol"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" vol",
+    "input": {
+      "psa": 4,
+      "vol": "invalid"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vol"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} vol",
+    "input": {
+      "psa": 4,
+      "vol": {}
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vol"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true vol",
+    "input": {
+      "psa": 4,
+      "vol": true
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vol"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum vol",
+    "input": {
+      "psa": 4,
+      "vol": 4
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "vol"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum vol",
+    "input": {
+      "psa": 4,
+      "vol": 440
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "vol"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

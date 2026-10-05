@@ -1,6 +1,13 @@
 [
   {
-    "label": "PSA 4,0 e volume 50 mL: 0,08",
+    "id": "densidade-do-psa",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "PSA 4,0 e volume 50 mL: 0,08",
+    "originalInput": {
+      "psa": 4,
+      "vol": 50
+    },
     "input": {
       "psa": 4,
       "vol": 50
@@ -13,14 +20,34 @@
       "level": "low",
       "tol": 0.0001
     },
-    "originalInput": {
-      "psa": 4,
-      "vol": 50
+    "recordedResult": {
+      "main": [
+        "0,08",
+        "ng/mL/cm³"
+      ],
+      "label": "Densidade do PSA",
+      "raw": {
+        "psad": 0.08
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "PSA 5,0 e volume 40 mL: 0,125",
+    "id": "densidade-do-psa",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "PSA 5,0 e volume 40 mL: 0,125",
+    "originalInput": {
+      "psa": 5,
+      "vol": 40
+    },
     "input": {
       "psa": 5,
       "vol": 40
@@ -32,14 +59,34 @@
       "level": "mid",
       "tol": 0.0001
     },
-    "originalInput": {
-      "psa": 5,
-      "vol": 40
+    "recordedResult": {
+      "main": [
+        "0,13",
+        "ng/mL/cm³"
+      ],
+      "label": "Densidade do PSA",
+      "raw": {
+        "psad": 0.125
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+    "id": "densidade-do-psa",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+    "originalInput": {
+      "psa": 6,
+      "vol": 40
+    },
     "input": {
       "psa": 6,
       "vol": 40
@@ -52,10 +99,23 @@
       "level": "high",
       "tol": 0.0001
     },
-    "originalInput": {
-      "psa": 6,
-      "vol": 40
+    "recordedResult": {
+      "main": [
+        "0,15",
+        "ng/mL/cm³"
+      ],
+      "label": "Densidade do PSA",
+      "raw": {
+        "psad": 0.15
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

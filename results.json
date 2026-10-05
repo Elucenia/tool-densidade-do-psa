@@ -1,0 +1,273 @@
+{
+  "id": "densidade-do-psa",
+  "at": "2026-10-05T17:29:17.866Z",
+  "adapter": {
+    "file": "apps/website/private/tool-code/densidade-do-psa/calculator.js",
+    "bytes": 4779,
+    "sha256": "7812527b8fa3d05be125d05696b19763c1cdf28c61c19b6268e26636773b5698"
+  },
+  "cases": [
+    {
+      "name": "PSA 4,0 e volume 50 mL: 0,08",
+      "input": {
+        "psa": 4,
+        "vol": 50
+      },
+      "obtained": {
+        "id": "densidade-do-psa",
+        "main": [
+          "0,08",
+          "ng/mL/cm³"
+        ],
+        "label": "Densidade do PSA",
+        "raw": {
+          "psad": 0.08
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "0,08",
+          "obtained": "0,08",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.psad",
+          "expected": 0.08,
+          "obtained": 0.08,
+          "tolerance": 0.0001,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.psad",
+          "expected": 0.08,
+          "obtained": 0.08,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "0,08",
+          "obtained": "0,08",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "ng/mL/cm³",
+          "obtained": "ng/mL/cm³",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "PSA 5,0 e volume 40 mL: 0,125",
+      "input": {
+        "psa": 5,
+        "vol": 40
+      },
+      "obtained": {
+        "id": "densidade-do-psa",
+        "main": [
+          "0,13",
+          "ng/mL/cm³"
+        ],
+        "label": "Densidade do PSA",
+        "raw": {
+          "psad": 0.125
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.psad",
+          "expected": 0.125,
+          "obtained": 0.125,
+          "tolerance": 0.0001,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.psad",
+          "expected": 0.125,
+          "obtained": 0.125,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "0,13",
+          "obtained": "0,13",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "ng/mL/cm³",
+          "obtained": "ng/mL/cm³",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+      "input": {
+        "psa": 6,
+        "vol": 40
+      },
+      "obtained": {
+        "id": "densidade-do-psa",
+        "main": [
+          "0,15",
+          "ng/mL/cm³"
+        ],
+        "label": "Densidade do PSA",
+        "raw": {
+          "psad": 0.15
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "0,15",
+          "obtained": "0,15",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.psad",
+          "expected": 0.15,
+          "obtained": 0.15,
+          "tolerance": 0.0001,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.psad",
+          "expected": 0.15,
+          "obtained": 0.15,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "0,15",
+          "obtained": "0,15",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "ng/mL/cm³",
+          "obtained": "ng/mL/cm³",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "refusals": {
+    "passed": 24,
+    "failed": 0,
+    "failures": []
+  },
+  "sourceNodeBrowserVmParity": true,
+  "actualBrowserDomVerified": false,
+  "newIndependentOracle": false,
+  "currentActualR6HttpEvidence": "pending",
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}
