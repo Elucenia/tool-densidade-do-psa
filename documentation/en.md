@@ -67,3 +67,22 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+Density < 0,10: lower probability of clinically significant cancer
+
+
+### 2
+
+Density between 0,10 and 0,15: intermediate zone
+
+
+### 3
+
+Density ≥ 0,15: above the classic threshold, favors cancer investigation
+

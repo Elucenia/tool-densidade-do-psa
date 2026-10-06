@@ -1,0 +1,387 @@
+{
+  "id": "densidade-do-psa",
+  "implementationVersion": "densidade-do-psa@native-2026-10-05+9c8716253f7e",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "PSA 4,0 e volume 50 mL: 0,08",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Densidade < 0,10: menor probabilidade de câncer clinicamente significativo",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PSA 5,0 e volume 40 mL: 0,125",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Densidade entre 0,10 e 0,15: zona intermediária",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Densidade ≥ 0,15: acima do limiar clássico, favorece investigação de câncer",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "PSA 4,0 e volume 50 mL: 0,08",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Density < 0,10: lower probability of clinically significant cancer",
+            "locale": "en",
+            "template": "documented-authored-0d63cf04b7d9afd5f2ac"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PSA 5,0 e volume 40 mL: 0,125",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Density between 0,10 and 0,15: intermediate zone",
+            "locale": "en",
+            "template": "documented-authored-00263e4acc093d360c8c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Density ≥ 0,15: above the classic threshold, favors cancer investigation",
+            "locale": "en",
+            "template": "documented-authored-a64c503bd323d4aa0b5b"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "PSA 4,0 e volume 50 mL: 0,08",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Densidad < 0,10: menor probabilidad de cáncer clínicamente significativo",
+            "locale": "es",
+            "template": "documented-authored-0d63cf04b7d9afd5f2ac"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PSA 5,0 e volume 40 mL: 0,125",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Densidad entre 0,10 y 0,15: zona intermedia",
+            "locale": "es",
+            "template": "documented-authored-00263e4acc093d360c8c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Densidad ≥ 0,15: por encima del umbral clásico, favorece la investigación de cáncer",
+            "locale": "es",
+            "template": "documented-authored-a64c503bd323d4aa0b5b"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "PSA 4,0 e volume 50 mL: 0,08",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Densité < 0,10 : probabilité plus faible de cancer cliniquement significatif",
+            "locale": "fr",
+            "template": "documented-authored-0d63cf04b7d9afd5f2ac"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PSA 5,0 e volume 40 mL: 0,125",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Densité entre 0,10 et 0,15 : zone intermédiaire",
+            "locale": "fr",
+            "template": "documented-authored-00263e4acc093d360c8c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Densité ≥ 0,15 : au-dessus du seuil classique, favorise l’exploration d’un cancer",
+            "locale": "fr",
+            "template": "documented-authored-a64c503bd323d4aa0b5b"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "PSA 4,0 e volume 50 mL: 0,08",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dichte < 0,10: geringere Wahrscheinlichkeit für klinisch signifikanten Krebs",
+            "locale": "de",
+            "template": "documented-authored-0d63cf04b7d9afd5f2ac"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PSA 5,0 e volume 40 mL: 0,125",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dichte zwischen 0,10 und 0,15: Zwischenbereich",
+            "locale": "de",
+            "template": "documented-authored-00263e4acc093d360c8c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dichte ≥ 0,15: über dem klassischen Schwellenwert, spricht für eine Krebsabklärung",
+            "locale": "de",
+            "template": "documented-authored-a64c503bd323d4aa0b5b"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "PSA 4,0 e volume 50 mL: 0,08",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Densità < 0,10: minore probabilità di cancro clinicamente significativo",
+            "locale": "it",
+            "template": "documented-authored-0d63cf04b7d9afd5f2ac"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PSA 5,0 e volume 40 mL: 0,125",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Densità tra 0,10 e 0,15: zona intermedia",
+            "locale": "it",
+            "template": "documented-authored-00263e4acc093d360c8c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Densità ≥ 0,15: al di sopra della soglia classica, favorisce l’indagine per cancro",
+            "locale": "it",
+            "template": "documented-authored-a64c503bd323d4aa0b5b"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "PSA 4,0 e volume 50 mL: 0,08",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "الكثافة < 0,10: احتمال أقل لسرطان ذي دلالة سريرية",
+            "locale": "ar",
+            "template": "documented-authored-0d63cf04b7d9afd5f2ac"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PSA 5,0 e volume 40 mL: 0,125",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "الكثافة بين 0,10 و0,15: منطقة وسطية",
+            "locale": "ar",
+            "template": "documented-authored-00263e4acc093d360c8c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "الكثافة ≥ 0,15: أعلى من العتبة الكلاسيكية، وتدعم إجراء استقصاء عن السرطان",
+            "locale": "ar",
+            "template": "documented-authored-a64c503bd323d4aa0b5b"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "PSA 4,0 e volume 50 mL: 0,08",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "密度 < 0,10：临床显著性癌症的概率较低",
+            "locale": "zh",
+            "template": "documented-authored-0d63cf04b7d9afd5f2ac"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PSA 5,0 e volume 40 mL: 0,125",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "密度在0,10和0,15之间：中间区间",
+            "locale": "zh",
+            "template": "documented-authored-00263e4acc093d360c8c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "密度 ≥ 0,15：高于经典阈值，有利于癌症检查",
+            "locale": "zh",
+            "template": "documented-authored-a64c503bd323d4aa0b5b"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "PSA 4,0 e volume 50 mL: 0,08",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "密度 < 0,10：臨床的に重要ながんの可能性は低い",
+            "locale": "ja",
+            "template": "documented-authored-0d63cf04b7d9afd5f2ac"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PSA 5,0 e volume 40 mL: 0,125",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "密度が0,10から0,15の間：中間域",
+            "locale": "ja",
+            "template": "documented-authored-00263e4acc093d360c8c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "密度 ≥ 0,15：従来の閾値を上回り、がんの精査を支持する",
+            "locale": "ja",
+            "template": "documented-authored-a64c503bd323d4aa0b5b"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "PSA 4,0 e volume 50 mL: 0,08",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "घनत्व < 0,10: चिकित्सीय रूप से महत्वपूर्ण कैंसर की कम संभावना",
+            "locale": "hi",
+            "template": "documented-authored-0d63cf04b7d9afd5f2ac"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "PSA 5,0 e volume 40 mL: 0,125",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "घनत्व 0,10 और 0,15 के बीच: मध्यवर्ती क्षेत्र",
+            "locale": "hi",
+            "template": "documented-authored-00263e4acc093d360c8c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "घनत्व ≥ 0,15: पारंपरिक सीमा से ऊपर, कैंसर की जांच का समर्थन करता है",
+            "locale": "hi",
+            "template": "documented-authored-a64c503bd323d4aa0b5b"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}

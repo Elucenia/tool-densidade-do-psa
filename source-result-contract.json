@@ -1,0 +1,168 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "densidade-do-psa",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "7c78fe06ed94c33b997fb85a2c910e9a6e6c0f27",
+    "oldEngineSha256": "7812527b8fa3d05be125d05696b19763c1cdf28c61c19b6268e26636773b5698",
+    "currentEngineSha256": "9c8716253f7e129626796230abdc1deaaaba1214919cff2c2992b479f91c3a6b"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "PSA 4,0 e volume 50 mL: 0,08",
+      "input": {
+        "psa": 4,
+        "vol": 50
+      },
+      "publicOutput": {
+        "id": "densidade-do-psa",
+        "main": [
+          "0,08",
+          "ng/mL/cm³"
+        ],
+        "label": "Densidade do PSA",
+        "raw": {
+          "psad": 0.08
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "psad": 0.08
+        },
+        "main": "0,08",
+        "level": "low",
+        "tol": 0.0001
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "0,08",
+          "ng/mL/cm³"
+        ],
+        "label": "Densidade do PSA",
+        "level": "low",
+        "verdict": "Densidade &lt; 0,10: menor probabilidade de câncer clinicamente significativo",
+        "raw": {
+          "psad": 0.08
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "PSA 5,0 e volume 40 mL: 0,125",
+      "input": {
+        "psa": 5,
+        "vol": 40
+      },
+      "publicOutput": {
+        "id": "densidade-do-psa",
+        "main": [
+          "0,13",
+          "ng/mL/cm³"
+        ],
+        "label": "Densidade do PSA",
+        "raw": {
+          "psad": 0.125
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "psad": 0.125
+        },
+        "level": "mid",
+        "tol": 0.0001
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "0,13",
+          "ng/mL/cm³"
+        ],
+        "label": "Densidade do PSA",
+        "level": "mid",
+        "verdict": "Densidade entre 0,10 e 0,15: zona intermediária",
+        "raw": {
+          "psad": 0.125
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "PSA 6,0 e volume 40 mL: 0,15 (limiar)",
+      "input": {
+        "psa": 6,
+        "vol": 40
+      },
+      "publicOutput": {
+        "id": "densidade-do-psa",
+        "main": [
+          "0,15",
+          "ng/mL/cm³"
+        ],
+        "label": "Densidade do PSA",
+        "raw": {
+          "psad": 0.15
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "psad": 0.15
+        },
+        "main": "0,15",
+        "level": "high",
+        "tol": 0.0001
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "0,15",
+          "ng/mL/cm³"
+        ],
+        "label": "Densidade do PSA",
+        "level": "high",
+        "verdict": "Densidade ≥ 0,15: acima do limiar clássico, favorece investigação de câncer",
+        "raw": {
+          "psad": 0.15
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    }
+  ]
+}

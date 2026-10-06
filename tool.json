@@ -111,7 +111,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "PSAdensidade/Benson 1992:PSA/volume, ng/m L/cm³; sem assumir ponto decorte universal",
-    "implementationVersion": "densidade-do-psa@native-2026-10-03+7812527b8fa3",
+    "implementationVersion": "densidade-do-psa@native-2026-10-05+9c8716253f7e",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/1371555/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -207,7 +207,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "7812527b8fa3d05be125d05696b19763c1cdf28c61c19b6268e26636773b5698"
+      "implementationHash": "9c8716253f7e129626796230abdc1deaaaba1214919cff2c2992b479f91c3a6b",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "densidade-do-psa@native-2026-10-03+7812527b8fa3",
+          "previousImplementationHash": "7812527b8fa3d05be125d05696b19763c1cdf28c61c19b6268e26636773b5698",
+          "implementationHash": "9c8716253f7e129626796230abdc1deaaaba1214919cff2c2992b479f91c3a6b",
+          "scientificBodySha256": "0b083fbedd422ede7b6435223366e290615ce790b1c81175f0d0beb67509c295",
+          "metadataContractHash": "84f07411ea0e265b039bcabc1a7ad7ec8f2aa0ba7ace8225eaa5017573513669",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "Benson 1992 estudou densidade de PSA em homens, com volume prostático por ultrassom transretal e PSA intermediário de 4,1–10 ng/mL pelo ensaio Hybritech. O artigo descreve nomogramas de risco; o valor PSA/volume isolado não constitui diagnóstico nem estabelece um corte universal. Método de volume, ensaio de PSA e população de aplicação devem ser considerados.",
     "sourceLimitEvidence": {
@@ -226,15 +254,15 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/densidade-do-psa/calculator.js",
-    "bytes": 4779,
-    "sha256": "7812527b8fa3d05be125d05696b19763c1cdf28c61c19b6268e26636773b5698"
+    "bytes": 4984,
+    "sha256": "9c8716253f7e129626796230abdc1deaaaba1214919cff2c2992b479f91c3a6b"
   },
-  "sourceToolSha256": "10314ffa2c812b6a9e87e9f6f3e538d0996966cfc7d3155b5617bd416a2754cc",
+  "sourceToolSha256": "529e6202b22fa2d04ea5d45ecf4bb6053e7fa94c51dba43788fc843a64d7cb38",
   "omittedFullReferenceBanks": [
     {
       "rows": 2,
       "sha256": "7a01fd704bb25f5d56842577ca87e804f2d1c03632aff07082bbb58282378081",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",
